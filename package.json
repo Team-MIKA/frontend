@@ -39,12 +39,16 @@
   },
   "gitHooks": {
     "pre-commit": [
-      "test",
       "lint-staged"]
+  },
+  "test-staged":{
+    "*.{js,jsx,vue,ts,tsx}": [
+      "test"
+    ]
   },
   "lint-staged": {
     "*.{js,jsx,vue,ts,tsx}": [
-      "test",
+      "vue-cli-service lint",
       "git add"
     ]
   }
